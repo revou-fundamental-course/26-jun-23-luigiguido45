@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+:root {
+  --primary-color: rgb(58,71,85);
+  --secondary-color: rgb(159,174,192);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+
+nav {
+  display: inline;
+  list-style-type: none;
+  margin-right: 1em;
+}
+nav img {
+  width: 4%;
+  position: absolute;
+  left: 5px;
+  margin-left: 5em;
+  margin-top: 13px;
+}
+nav ul {
+  padding: 0;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  right: 5px;
+  margin-right: 2.5em;
+}
+nav li:hover {
+  background-color: var(--primary-color);
+}
+nav li:hover a {
+  color: var(--secondary-color);
+}
+nav li {
+  display: inline-flex;
+  padding: 7px 25px;
+  margin: 0;
+}
+nav li.middle {
+  margin: 0 -5px;
+  border-left-style: solid;
+  border-left-color: black;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-color: black;
+  border-right-width: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  color: rgb(0, 0, 0);
+}
+
+hr {
+  margin-top: 3.5em;
+  color: rgb(87, 88, 88);
+  opacity: 0.3;
+}
+
+h1.title {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+p.desc {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+img {
+  margin: 2em 0 2em 100px;
+  width: 50%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact {
+  padding: 0;
+  color: var(--primary-color);
+  background-color: rgb(236, 241, 244);
+  position: absolute;
+  margin-top: 2em;
+  right: 100px;
+}
+.contact h3 {
+  padding: 2em 0 0 30px;
+}
+.contact p {
+  padding: 0 2em 1em 30px;
+  font-size: smaller;
+  color: var(--secondary-color);
+}
+.contact form {
+  padding: 2em 30px 1em 30px;
+  margin-bottom: 4em;
+}
+.contact input[type=text], .contact select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.contact input[type=tel], .contact select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.contact input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.contact textarea {
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-family: "Poppins";
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.contact input[type=submit] {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(40, 51, 61);
+  width: 100%;
+  height: 45px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.contact input[type=submit]:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+h4.info {
+  margin: 10em 0 2em 100px;
+  width: 50%;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+ol.feature {
+  margin: 2em 0 2em 100px;
+  width: 35%;
+  clear: both;
+  list-style: none;
+  color: rgb(159, 174, 192);
+}
+ol.feature li {
+  display: block;
+  position: relative;
+  counter-increment: inst;
+  margin: 1.5em 0;
+  padding-left: 15px;
+}
+
+.feature li::before {
+  content: counter(inst);
+  /*0 0.675em 0.675em 0*/
+  background: rgb(236, 241, 244);
+  color: rgb(159, 174, 192);
+  border-radius: 50%;
+  font-size: 1rem;
+  position: absolute;
+  font-weight: bolder;
+  text-align: center;
+  --size: 40px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  border-radius: 50%;
+  text-align: center;
+}
+
+h1.package {
+  text-align: center;
+  background-color: rgb(236, 241, 244);
+  padding: 1.5em 0 2em 0;
+  color: var(--primary-color);
+}
+
+ul.bottom, ul.top {
+  padding-left: 4em;
+  list-style-type: none;
+  display: flex;
+  place-content: space-between;
+}
+ul.bottom .mobile, ul.top .mobile {
+  display: none;
+}
+ul.bottom h4, ul.top h4 {
+  color: var(--primary-color);
+}
+ul.bottom li, ul.top li {
+  width: 33%;
+  padding: 1em 4em 2em 4em;
+}
+ul.bottom p, ul.top p {
+  width: 80%;
+  color: var(--secondary-color);
+}
+
+ul.top li {
+  position: relative;
+}
+ul.top li:before {
+  content: "";
+  background-image: url("/Assets/img/bulb.svg");
+  background-size: contain;
+  background-color: rgb(236, 241, 244);
+  left: 1.5em;
+  top: 2.2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+ul.bottom li {
+  position: relative;
+}
+ul.bottom li:before {
+  content: "";
+  background-image: url("/Assets/img/star.svg");
+  background-size: contain;
+  background-color: rgb(236, 241, 244);
+  left: 1.5em;
+  top: 2.2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+h1.closing, p.closing {
+  text-align: center;
+}
+
+h1.closing {
+  color: var(--primary-color);
+  font-weight: 550;
+}
+
+p.closing {
+  color: var(--secondary-color);
+  padding: 10px 300px;
+}
+
+.button2 {
+  text-align: center;
+  padding-bottom: 5em;
+}
+
+button {
+  background-color: rgb(40, 51, 61);
+  padding: 10px 45px;
+  height: 45px;
+  width: 250px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  margin-left: 0;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.slider-item h4 {
+  margin-left: 100px;
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.slider-item p {
+  margin-left: 100px;
+  font-size: 14px;
+  color: #666;
+  margin-top: -25px;
+  font-style: italic;
+}
+
+.slider-item .description {
+  margin: 0 0 10px 100px;
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  width: 50%;
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  nav img {
+    width: 8%;
+    margin-left: 2em;
+  }
+  nav ul {
+    margin-right: 1em;
+  }
+  .main {
+    display: block;
+    justify-content: none;
+  }
+  .slider {
+    width: 140%;
+  }
+  .slider-item h4 {
+    margin-left: 100px;
+  }
+  .slider-item p {
+    margin-left: 100px;
+  }
+  .slider-item .description {
+    margin: 0 0 10px 100px;
+  }
+  .contact {
+    position: inherit;
+    padding: 0;
+    color: var(--primary-color);
+    background-color: rgb(236, 241, 244);
+    margin-top: 2em;
+  }
+  .contact br.space {
+    display: none;
+  }
+  .contact h3 {
+    padding: 2em 0 0 90px;
+  }
+  .contact p {
+    padding: 0 2em 1em 90px;
+    font-size: smaller;
+    color: var(--secondary-color);
+  }
+  .contact form {
+    padding: 2em 30px 1em 90px;
+    margin-bottom: 4em;
+  }
+  .contact input[type=text], .contact select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .contact input[type=tel], .contact select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .contact input[type=email] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .contact textarea {
+    border-radius: 5px;
+    padding: 12px 35px;
+    font-family: "Poppins";
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .contact input[type=submit] {
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(40, 51, 61);
+    width: 40%;
+    height: 45px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .contact input[type=submit]:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  h4.info {
+    width: 70%;
+    margin-top: 4em;
+  }
+  ol.feature {
+    width: 50%;
+  }
+  ul.top li, ul.bottom li {
+    display: none;
+  }
+  ul.top li:first-of-type, ul.bottom li:first-of-type {
+    width: 60%;
+    display: block;
+  }
+  p.closing {
+    padding: 10px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
