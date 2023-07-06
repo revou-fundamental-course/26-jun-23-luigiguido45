@@ -228,7 +228,7 @@ ul.top{
         position: relative;
        &:before{ 
         content: '';
-            background-image: url('./Assets/img/bulb.svg');
+            background-image: url('../Assets/img/bulb.svg');
             background-size: contain;
             background-color: rgb(236,241,244);
             left: 1.5em;
@@ -249,7 +249,7 @@ ul.bottom{
         position: relative;
        &:before{ 
         content: '';
-            background-image: url('./Assets/img/star.svg');
+            background-image: url('../Assets/img/star.svg');
             background-size: contain;
             background-color: rgb(236,241,244);
             left: 1.5em;
