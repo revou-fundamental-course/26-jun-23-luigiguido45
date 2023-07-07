@@ -1,8 +1,8 @@
 //Autoslider
 const images = [
-  { url: '.../Assets/img/familyfix.jpg', description: '"Keluarga kami sangat puas berbelanja disini karena semua kebutuhan, baik untuk orangtua, hingga anak-anak kami tersedia di sini."', title: 'Michael Scott', details: 'Karyawan Swasta, 42' },
-  { url: '.../Assets/img/ladyfix.jpg', description: '"Akses nya yang mudah, membuat saya tidak kesulitan untuk restock belanjaan bulanan untuk keluarga"', title: 'Pam Beesly ', details: 'Ibu rumah tangga, 40'},
-  { url: '.../Assets/img/man2.jpg', description: '"Saya jadi tidak perlu bingung untuk berbelanja sekarang"', title: 'Zidan', details: 'Atlet Basket, 29' }
+  { url: '../Assets/img/familyfix.jpg', description: '"Keluarga kami sangat puas berbelanja disini karena semua kebutuhan, baik untuk orangtua, hingga anak-anak kami tersedia di sini."', title: 'Michael Scott', details: 'Karyawan Swasta, 42' },
+  { url: '../Assets/img/ladyfix.jpg', description: '"Akses nya yang mudah, membuat saya tidak kesulitan untuk restock belanjaan bulanan untuk keluarga"', title: 'Pam Beesly ', details: 'Ibu rumah tangga, 40'},
+  { url: '../Assets/img/man2.jpg', description: '"Saya jadi tidak perlu bingung untuk berbelanja sekarang"', title: 'Zidan', details: 'Atlet Basket, 29' }
 ];
 
 const sliderContainer = document.querySelector('.slider-container');
