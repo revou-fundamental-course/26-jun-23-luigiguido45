@@ -286,6 +286,11 @@ p.closing {
   text-align: center;
   padding-bottom: 5em;
 }
+.button2 button {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
 
 button {
   background-color: rgb(40, 51, 61);
