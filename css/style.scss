@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: rgb(58,71,85);
-    --secondary-color: rgb(159,174,192);
+    --secondary-color: #9faec0;
 }
 
 html{
@@ -13,7 +13,22 @@ body{
     margin: 0;
     font-family: 'Poppins';
 }
+section#home{
+    hr{
+        margin-top: 3.5em;
+    }
+}
+.visible{
+    display:block;
+}
 nav{
+    
+    .menu{
+        display:none;
+    }
+    .exit-menu{
+        display:none;
+    }
     display: inline;
     list-style-type: none;
     margin-right: 1em;
@@ -54,6 +69,9 @@ nav{
 
     }
 }
+
+
+
 a{
     text-decoration: none;
 }
@@ -88,8 +106,8 @@ img{
     position: absolute;
     margin-top: 2em;
     right: 100px;;
-    h3{
-        padding: 2em 0 0 30px;
+    h2{
+        padding: 1em 0 0 30px;
     }
     p{
         padding: 0 2em 1em 30px;
@@ -155,13 +173,13 @@ img{
     }
 }
 h4.info{
-    margin: 10em 0 2em 100px;
+    margin: 10em 0 2em 10%;
     width: 50%;
     font-weight: 600;
     color: var(--primary-color);
 }
 ol.feature{
-    margin: 2em 0 2em 100px;
+    margin: 2em 0 2em 10%;
     width: 35%;
     clear: both;
     list-style: none;
@@ -215,7 +233,7 @@ ul.bottom, ul.top{
     place-content: space-between;
     li{
         width: 33%;
-        padding: 1em 4em 2em 4em;;
+        padding: 1em 4em 2em 10%;
     }
     p{
         width: 80%;
@@ -224,6 +242,7 @@ ul.bottom, ul.top{
 }
 
 ul.top{ 
+    padding-left: 7%;
     li{
         position: relative;
        &:before{ 
@@ -245,6 +264,7 @@ ul.top{
 }
 
 ul.bottom{ 
+    padding-left: 7%;
     li{
         position: relative;
        &:before{ 
@@ -258,7 +278,7 @@ ul.bottom{
             width: 20px;
             height: 20px;
             margin-right: .5em;
-            padding: 5px;
+            padding: 5px ;
             border-radius: 50%;
         }
     }
@@ -305,7 +325,7 @@ button:hover{
 .container {
     position: relative;
     margin-left: 0;
-  }
+  
   
   .slider {
     width: 100%;
@@ -355,59 +375,56 @@ button:hover{
     font-style: italic;
 
   }
+}
 
-  @media (max-width: 800px){
-
+  @media screen and  (max-width: 1050px){
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     nav{
         img{
             width: 8%;
             margin-left: 2em;
+            margin-top: 10px;
         }
         ul{
             margin-right: 1em;
+            
         }
     }
     .main{
         display:block;
         justify-content:none;
+
     }
     .slider{
-        width: 140%;
+        width: 100%;
     }
-    .slider-item h4 {
-        margin-left: 100px;
-      }
-      
-      .slider-item p {
-        margin-left: 100px;
-      }
-      
-      .slider-item .description {
-        margin: 0 0 10px 100px;
-      }
     .contact{
         position:inherit;
-        padding: 0;
+        padding: 0 0 1px 0;
         color: var(--primary-color);
-        background-color: rgb(236,241,244);
+        background-color: #ecf1f4;
         margin-top: 2em;
         br.space{
             display:none;
         }
-        h3{
-            padding: 2em 0 0 90px;
+        h2{
+            padding: 2em 0 0 7%;
         }
         p{
-            padding: 0 2em 1em 90px;
+            padding: 0 2em 1em 7%;
             font-size: smaller;
             color: var(--secondary-color);
         }
         form{
-            padding: 2em 30px 1em 90px;
+            padding: 2em 30px 1em 7%;
             margin-bottom: 4em;
         }
         input[type=text], select{
-            width: 60%;
+            width: 80%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -416,7 +433,7 @@ button:hover{
             box-sizing: border-box;
         }
         input[type=tel], select{
-            width: 60%;
+            width: 80%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -425,7 +442,7 @@ button:hover{
             box-sizing: border-box;
         }
         input[type=email]{
-            width: 60%;
+            width: 80%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -434,6 +451,7 @@ button:hover{
             box-sizing: border-box;
         }
         textarea{
+            width: 80%;
             border-radius: 5px;
             padding: 12px 35px;
             font-family: 'Poppins';
@@ -477,7 +495,102 @@ button:hover{
         }
     }
     p.closing{
-        padding: 10px 20px;
+        padding: 10px 10%;
+        text-align: center;
     }
 
 }
+
+@media screen and  (max-width: 650px){
+    section#home{
+        hr{
+            margin:0;
+        }
+    }
+    nav{
+        a{
+            margin:0;
+            img{
+                margin: 0;
+                left:2em;
+            }
+        }
+        img{
+            position: relative;
+        } 
+        display :block;
+        position:relative;  
+        img.menu{
+            display:block;
+            position: absolute;
+            width: 7%;
+            top:5px;
+            left:90%;
+            margin: 0;
+            cursor: pointer;
+        }
+        img.exit-menu{
+            display:block;
+            position:fixed;
+            width: 4%;
+            margin: 1em 0 0 0;
+            left: 90%;
+            top:8px;
+            z-index: 999;
+            cursor: pointer;
+        }
+        ul{
+            display:none;
+            z-index: 998;     
+            background-color: var(--primary-color);
+            margin: 0 -1em 0 0;
+            border:none;
+            position:fixed;
+            top:0;
+            right:0px;
+            height: 110vh;
+            padding: 5em 10px 0 10px;
+            li{
+                display:block;
+                right:0;
+                padding: 0 2.5em 1em 2em;
+                font-size: 1.2em;
+                margin-top:  1em;
+                text-align: right;
+                a{
+                    color:var(--secondary-color);
+                    
+                }
+            }
+            li.middle{
+                border:none;
+                margin-left: 0.5px;
+                margin-top: 1em;
+            }
+        }
+    }
+    .container{
+        margin-left: -10%;
+    }
+    ul.bottom, ul.top{
+        padding-left: 5%;
+        li.mobile{
+            padding-left: 50px;
+            h4,p {
+                padding-left: 5%;
+                font-size: 1.1em;
+                margin-top: 15px;
+            }
+            p{
+                width: 100%;
+            }
+        } 
+    }
+    }
+
+    @media screen and  (max-width: 420px){
+        .container{
+            margin-left:-17%;
+        }
+    }
+

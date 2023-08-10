@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 :root {
   --primary-color: rgb(58,71,85);
-  --secondary-color: rgb(159,174,192);
+  --secondary-color: #9faec0;
 }
 
 html {
@@ -13,10 +13,24 @@ body {
   font-family: "Poppins";
 }
 
+section#home hr {
+  margin-top: 3.5em;
+}
+
+.visible {
+  display: block;
+}
+
 nav {
   display: inline;
   list-style-type: none;
   margin-right: 1em;
+}
+nav .menu {
+  display: none;
+}
+nav .exit-menu {
+  display: none;
 }
 nav img {
   width: 4%;
@@ -96,8 +110,8 @@ img {
   margin-top: 2em;
   right: 100px;
 }
-.contact h3 {
-  padding: 2em 0 0 30px;
+.contact h2 {
+  padding: 1em 0 0 30px;
 }
 .contact p {
   padding: 0 2em 1em 30px;
@@ -163,14 +177,14 @@ img {
 }
 
 h4.info {
-  margin: 10em 0 2em 100px;
+  margin: 10em 0 2em 10%;
   width: 50%;
   font-weight: 600;
   color: var(--primary-color);
 }
 
 ol.feature {
-  margin: 2em 0 2em 100px;
+  margin: 2em 0 2em 10%;
   width: 35%;
   clear: both;
   list-style: none;
@@ -225,13 +239,16 @@ ul.bottom h4, ul.top h4 {
 }
 ul.bottom li, ul.top li {
   width: 33%;
-  padding: 1em 4em 2em 4em;
+  padding: 1em 4em 2em 10%;
 }
 ul.bottom p, ul.top p {
   width: 80%;
   color: var(--secondary-color);
 }
 
+ul.top {
+  padding-left: 7%;
+}
 ul.top li {
   position: relative;
 }
@@ -250,6 +267,9 @@ ul.top li:before {
   border-radius: 50%;
 }
 
+ul.bottom {
+  padding-left: 7%;
+}
 ul.bottom li {
   position: relative;
 }
@@ -314,20 +334,17 @@ button:hover {
   position: relative;
   margin-left: 0;
 }
-
-.slider {
+.container .slider {
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
 }
-
-.slider-container {
+.container .slider-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
-.slider-item {
+.container .slider-item {
   flex-shrink: 0;
   width: 100%;
   text-align: center;
@@ -337,23 +354,20 @@ button:hover {
   justify-content: flex-start;
   text-align: left;
 }
-
-.slider-item h4 {
+.container .slider-item h4 {
   margin-left: 100px;
   font-size: 18px;
   color: #333;
   margin-top: 15px;
 }
-
-.slider-item p {
+.container .slider-item p {
   margin-left: 100px;
   font-size: 14px;
   color: #666;
   margin-top: -25px;
   font-style: italic;
 }
-
-.slider-item .description {
+.container .slider-item .description {
   margin: 0 0 10px 100px;
   font-size: 12px;
   color: #999;
@@ -362,10 +376,16 @@ button:hover {
   font-style: italic;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 1050px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   nav img {
     width: 8%;
     margin-left: 2em;
+    margin-top: 10px;
   }
   nav ul {
     margin-right: 1em;
@@ -375,41 +395,32 @@ button:hover {
     justify-content: none;
   }
   .slider {
-    width: 140%;
-  }
-  .slider-item h4 {
-    margin-left: 100px;
-  }
-  .slider-item p {
-    margin-left: 100px;
-  }
-  .slider-item .description {
-    margin: 0 0 10px 100px;
+    width: 100%;
   }
   .contact {
     position: inherit;
-    padding: 0;
+    padding: 0 0 1px 0;
     color: var(--primary-color);
-    background-color: rgb(236, 241, 244);
+    background-color: #ecf1f4;
     margin-top: 2em;
   }
   .contact br.space {
     display: none;
   }
-  .contact h3 {
-    padding: 2em 0 0 90px;
+  .contact h2 {
+    padding: 2em 0 0 7%;
   }
   .contact p {
-    padding: 0 2em 1em 90px;
+    padding: 0 2em 1em 7%;
     font-size: smaller;
     color: var(--secondary-color);
   }
   .contact form {
-    padding: 2em 30px 1em 90px;
+    padding: 2em 30px 1em 7%;
     margin-bottom: 4em;
   }
   .contact input[type=text], .contact select {
-    width: 60%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -418,7 +429,7 @@ button:hover {
     box-sizing: border-box;
   }
   .contact input[type=tel], .contact select {
-    width: 60%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -427,7 +438,7 @@ button:hover {
     box-sizing: border-box;
   }
   .contact input[type=email] {
-    width: 60%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -436,6 +447,7 @@ button:hover {
     box-sizing: border-box;
   }
   .contact textarea {
+    width: 80%;
     border-radius: 5px;
     padding: 12px 35px;
     font-family: "Poppins";
@@ -476,6 +488,95 @@ button:hover {
     display: block;
   }
   p.closing {
-    padding: 10px 20px;
+    padding: 10px 10%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  section#home hr {
+    margin: 0;
+  }
+  nav {
+    display: block;
+    position: relative;
+  }
+  nav a {
+    margin: 0;
+  }
+  nav a img {
+    margin: 0;
+    left: 2em;
+  }
+  nav img {
+    position: relative;
+  }
+  nav img.menu {
+    display: block;
+    position: absolute;
+    width: 7%;
+    top: 5px;
+    left: 90%;
+    margin: 0;
+    cursor: pointer;
+  }
+  nav img.exit-menu {
+    display: block;
+    position: fixed;
+    width: 4%;
+    margin: 1em 0 0 0;
+    left: 90%;
+    top: 8px;
+    z-index: 999;
+    cursor: pointer;
+  }
+  nav ul {
+    display: none;
+    z-index: 998;
+    background-color: var(--primary-color);
+    margin: 0 -1em 0 0;
+    border: none;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    height: 110vh;
+    padding: 5em 10px 0 10px;
+  }
+  nav ul li {
+    display: block;
+    right: 0;
+    padding: 0 2.5em 1em 2em;
+    font-size: 1.2em;
+    margin-top: 1em;
+    text-align: right;
+  }
+  nav ul li a {
+    color: var(--secondary-color);
+  }
+  nav ul li.middle {
+    border: none;
+    margin-left: 0.5px;
+    margin-top: 1em;
+  }
+  .container {
+    margin-left: -10%;
+  }
+  ul.bottom, ul.top {
+    padding-left: 5%;
+  }
+  ul.bottom li.mobile, ul.top li.mobile {
+    padding-left: 50px;
+  }
+  ul.bottom li.mobile h4, ul.bottom li.mobile p, ul.top li.mobile h4, ul.top li.mobile p {
+    padding-left: 5%;
+    font-size: 1.1em;
+    margin-top: 15px;
+  }
+  ul.bottom li.mobile p, ul.top li.mobile p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .container {
+    margin-left: -17%;
   }
 }/*# sourceMappingURL=style.css.map */
